@@ -7,7 +7,7 @@ server:
 
 endpoints:
   products:
-    base: "http://product-service/api/v1"
+    base: "http://product-service/api/v1/aux"
 
 #No necesario por eureka porque viene implicito
 #product-service:
