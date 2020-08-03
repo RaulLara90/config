@@ -1,23 +1,23 @@
 spring:
   application:
-    name: item-service
+    name: zuul-service
 
 server:
-  port: 8002
-
-endpoints:
-  products:
-    base: "http://product-service/api/v1"
-
-#No necesario por eureka porque viene implicito
-#product-service:
-    #  ribbon:
-    #listOfServers: "localhost:8001/api/v1/products,localhost:9001/api/v1/products"
+  port: 8090
 
 eureka:
   client:
     service-url:
       defaultZone: "http://localhost:8761/eureka"
+
+zuul:
+  routes:
+    product-service:
+      service-id: product-service
+      path: /products/**
+    item-service:
+      service-id: item-service
+      path: /items/**
 
 #hystrix:
 #  command:

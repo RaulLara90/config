@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: product-service
+
+#Selecciona puerto libre random
+server:
+  port: ${PORT:0}
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8761/eureka"
+  #eureka instance para generar un valor de la app distinto por cada replica
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
