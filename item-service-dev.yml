@@ -3,7 +3,7 @@ spring:
     name: item-service
 
 server:
-  port: 8009
+  port: 8010
 
 endpoints:
   products:
