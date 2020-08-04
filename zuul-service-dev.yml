@@ -18,6 +18,9 @@ zuul:
     item-service:
       service-id: item-service
       path: /items/**
+    user-service:
+      service-id: user-service
+      path: /users/**
 
 #hystrix:
 #  command:
