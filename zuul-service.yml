@@ -13,7 +13,7 @@ eureka:
 zuul:
   routes:
     security:
-      sensitive-headers: Cookie, Set-Cookie
+      sensitive-headers: "Cookie, Set-Cookie"
     product-service:
       service-id: product-service
       path: /products/**
