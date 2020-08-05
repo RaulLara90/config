@@ -12,6 +12,8 @@ eureka:
 
 zuul:
   routes:
+    security:
+      sensitive-headers: Cookie, Set-Cookie
     product-service:
       service-id: product-service
       path: /products/**
@@ -21,6 +23,10 @@ zuul:
     user-service:
       service-id: user-service
       path: /users/**
+    oauth-service:
+      service-id: oauth-service
+      path: /security/**
+
 
 #hystrix:
 #  command:
