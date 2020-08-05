@@ -4,7 +4,7 @@ spring:
   
   #Selecciona puerto libre random
   server:
-    port: ${PORT:0}
+    port: 9100
   
   eureka:
     client:
