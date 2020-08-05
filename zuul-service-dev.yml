@@ -12,8 +12,6 @@ eureka:
 
 zuul:
   routes:
-    security:
-      sensitive-headers: "Cookie, Set-Cookie"
     product-service:
       service-id: product-service
       path: /products/**
@@ -26,16 +24,17 @@ zuul:
     oauth-service:
       service-id: oauth-service
       path: /security/**
+      sensitive-headers: "Cookie, Set-Cookie"
 
 
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        istolation:
-#          thread:
-#            timeoutOnMilliseconds: 20000
-#
-#ribbon:
-#  ConnectTimeout: 3000
-#  ReadTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        istolation:
+          thread:
+            timeoutOnMilliseconds: 20000
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 10000
