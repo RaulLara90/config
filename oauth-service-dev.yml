@@ -3,18 +3,18 @@ spring:
       name: oauth-service
   
   #Selecciona puerto libre random
-  server:
-    port: 9100
+server:
+  port: 9100
   
-  eureka:
-    client:
-      service-url:
-        defaultZone: "http://localhost:8761/eureka"
-    instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-  
-  logging:
-    level:
-      org:
-        hibernate:
-          SQL: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8761/eureka"
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
