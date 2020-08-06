@@ -27,7 +27,6 @@ zuul:
       sensitive-headers: "Cookie, Set-Cookie"
 
 
-
 hystrix:
   command:
     default:
@@ -39,4 +38,3 @@ hystrix:
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 10000
-
