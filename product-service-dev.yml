@@ -10,7 +10,7 @@ spring:
       type: rabbit
   
   datasource:
-    url: jdbc:mysql://mysql-server:3307/db_springboot_cloud?serverTimezone=Europe/Madrid&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://mysql-server:3307/db_springboot_cloud?serverTimezone=Europe/Madrid&allowPublicKeyRetrieval=true&useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     username: root
     password: Rla171290
     driver-class-name: com.mysql.cj.jdbc.Driver
