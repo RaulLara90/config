@@ -10,9 +10,9 @@ spring:
       type: rabbit
   
   datasource:
-    url: jdbc:mysql://localhost:3306/db_springboot_cloud?serverTimezone=Europe/Madrid
+    url: jdbc:mysql://mysql-server:3307/db_springboot_cloud?serverTimezone=Europe/Madrid
     username: root
-    password: Rla171290!!
+    password: Rla171290
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect

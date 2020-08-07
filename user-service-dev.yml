@@ -10,9 +10,9 @@ spring:
       type: rabbit
   
   datasource:
-    url: jdbc:postgresql://localhost:5432/db_springboot_cloud
+    url: jdbc:postgresql://postgres-server:5433/db_springboot_cloud
     username: postgres
-    password: Rla171290!!
+    password: Rla171290
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:
