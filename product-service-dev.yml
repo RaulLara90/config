@@ -33,7 +33,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: "http://eureka-server:8761/eureka"
+      defaultZone: "http://eureka-service:8761/eureka"
   #eureka instance para generar un valor de la app distinto por cada replica
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
