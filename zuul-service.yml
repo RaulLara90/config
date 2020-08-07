@@ -15,7 +15,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: "http://localhost:8761/eureka"
+      defaultZone: "http://eureka-server:8761/eureka"
 
 zuul:
   routes:
@@ -33,15 +33,14 @@ zuul:
       path: /security/**
       sensitive-headers: "Cookie, Set-Cookie"
 
-
 hystrix:
   command:
     default:
       execution:
         istolation:
           thread:
-            timeoutOnMilliseconds: 20000
+            timeoutOnMilliseconds: 60000
 
 ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 10000
+  ConnectTimeout: 9000
+  ReadTimeout: 30000
