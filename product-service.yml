@@ -2,7 +2,7 @@ spring:
   application:
     name: product-service
   datasource:
-    url: jdbc:mysql://localhost:3306/db_springboot_cloud
+    url: jdbc:mysql://localhost:3306/db_springboot_cloud?serverTimezone=Europe/Madrid
     username: root
     password: Rla171290!!
     driver-class-name: com.mysql.cj.jdbc.Driver
