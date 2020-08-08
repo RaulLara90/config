@@ -8,7 +8,7 @@ spring:
     base-url: "http://zipkin-server:9411/"
     sender:
       type: rabbit
-  rabbit:
+  rabbitmq:
     host: rabbitmq38
   
 server:
